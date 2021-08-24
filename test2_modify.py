@@ -31,8 +31,8 @@ class csv_dataset:
         val_labels = val_df.pop(target)
         
         # tf.data.Dataset.from_tensor_slices(): 可以獲取列表或數組的切片。
-        self.train_ds = tf.data.Dataset.from_tensor_slices((dict(self.train_df), train_labels))
-        self.val_ds = tf.data.Dataset.from_tensor_slices((dict(self.val_df), val_labels))
+        self.train_ds = tf.data.Dataset.from_tensor_slices((dict(train_df), train_labels))
+        self.val_ds = tf.data.Dataset.from_tensor_slices((dict(val_df), val_labels))
 
         # shuffle(): 用來打亂數據集中數據順序.
         # buffer_size: https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/661458/
