@@ -20,4 +20,10 @@ Difference2:
 **test2_modify.py**   
 ![Screenshot from 2021-08-24 14-43-05](https://user-images.githubusercontent.com/19554347/130569364-56d5cd09-1e35-44e3-92f6-74f27ebca775.png)
 
+**Conda virtual env**
 
+```bash
+
+conda create --name [env_name]  python=3.8
+conda activate [env_name]
+```
