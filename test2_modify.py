@@ -31,6 +31,12 @@ class csv_dataset:
         val_labels = val_df.pop(target)
         
         # tf.data.Dataset.from_tensor_slices(): 可以獲取列表或數組的切片。
+        
+        '''Error:
+        self.train_ds = tf.data.Dataset.from_tensor_slices((dict(self.train_df), train_labels))
+        self.val_ds = tf.data.Dataset.from_tensor_slices((dict(self.val_df), val_labels))'''
+        
+        '''correct: '''
         self.train_ds = tf.data.Dataset.from_tensor_slices((dict(train_df), train_labels))
         self.val_ds = tf.data.Dataset.from_tensor_slices((dict(val_df), val_labels))
 
