@@ -56,13 +56,7 @@ if __name__ == '__main__':
 
     train_ds, val_ds = heart_dataset.df_to_datasets(target_value)
 
-    '''# .take(n): get n datas.
-    for x, y in train_ds.take(1):
-        # tf.print("Input(Features):", x)
-        tf.print("Target:", y)'''
-
     train_ds = train_ds.batch(32)
     val_ds = val_ds.batch(32)
 
     print(f'train_ds: \n{train_ds}')
-
