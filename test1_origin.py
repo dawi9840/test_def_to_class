@@ -46,15 +46,8 @@ if __name__ == '__main__':
     train_df = df.drop(val_df.index)
     # print(f'\nlen of: \ndf: {len(df)}, train_df:{len(train_df)}, val_df: {len(val_df)}')
 
-    df_to_dataset(dataframe=df, target=target_value)
-
     train_ds = df_to_dataset(dataframe=train_df, target=target_value)
     val_ds = df_to_dataset(dataframe=val_df, target=target_value)
-
-    # .take(n): get n datas.
-    for x, y in train_ds.take(1):
-        # tf.print("Input(Features):", x)
-        tf.print("Target:", y)
 
     train_ds = train_ds.batch(32)
     val_ds = val_ds.batch(32)
