@@ -64,6 +64,5 @@ if __name__ == '__main__':
     train_ds = train_ds.batch(32)
     val_ds = val_ds.batch(32)
 
-    # print(f'train_ds: \n{train_ds}')
-    print('train_ds:')
-    tf.print(train_ds)
+    print(f'train_ds: \n{train_ds}')
+
